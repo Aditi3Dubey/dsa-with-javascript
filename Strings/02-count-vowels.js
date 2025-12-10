@@ -6,7 +6,7 @@
 /* ---------------- Approach 1 (for loop) ---------------- */
 
 
-let str = "hello";
+let str = "hEllo";
 str = str.toLowerCase();
 let count = 0;
 let vowels = "aeiou";

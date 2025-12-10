@@ -43,4 +43,4 @@ while (left < right) {
   right--;
 }
 
-console.log(isPalindrome);
+console.log(isPalindrome); // true

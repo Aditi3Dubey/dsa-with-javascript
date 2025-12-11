@@ -5,6 +5,7 @@
 */
 
 /* ---------------- Approach 1: Build reversed string ---------------- */
+
 function checkPalindrome(str) {
   // Convert the input string to lowercase
   str = str.toLowerCase();

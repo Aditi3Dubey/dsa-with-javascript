@@ -1,5 +1,5 @@
 /*
-  Problem: Count vowels in a string
+  Problem: Count vowels in a string 
 */
 
 

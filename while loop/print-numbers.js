@@ -1,138 +1,149 @@
-//print number 1 to 10
+/*
+=====================================
+While Loop Practice Problems
+=====================================
+*/
 
-// let n=1;
+/* ----------------------------------
+   1. Print numbers from 1 to 10
+----------------------------------- */
 
-// while(n<=10){
-//   console.log(n);
-//   n++;
-// }
+let i = 1;
 
-//print number from 10 down to 1 in reverse order
+while (i <= 10) {
+  console.log(i);
+  i++;
+}
 
-// let n=10;
+/* ----------------------------------
+   2. Print numbers from 10 to 1
+----------------------------------- */
 
-// while(n>=1){
-//   console.log(n);
-//   n--;
-// }
+let j = 10;
 
-//print all even numbers between 1 and 100
+while (j >= 1) {
+  console.log(j);
+  j--;
+}
 
-// let n=1;
+/* ----------------------------------
+   3. Print all even numbers (1–100)
+----------------------------------- */
 
-// while(n<=100){
-//   if(n%2===0){
-//     console.log(n);
-//   }
-//     n++;
-// }
+let k = 1;
 
-//print all odd numbers between 1 and 100
+while (k <= 100) {
+  if (k % 2 === 0) {
+    console.log(k);
+  }
+  k++;
+}
 
-// let n=1;
+/* ----------------------------------
+   4. Print all odd numbers (1–100)
+----------------------------------- */
 
-// while(n<=100){
-//   if(n%2!==0){
-//     console.log(n);
-//   }
-//   n++;
-// }
+let l = 1;
 
-function MuliplicationTable(m) {
+while (l <= 100) {
+  if (l % 2 !== 0) {
+    console.log(l);
+  }
+  l++;
+}
+
+/* ----------------------------------
+   5. Print multiplication table
+----------------------------------- */
+
+function printMultiplicationTable(number) {
   let n = 1;
 
   while (n <= 10) {
-    console.log(` ${m} x ${n} = ${m * n}`);
+    console.log(`${number} x ${n} = ${number * n}`);
     n++;
   }
-  console.log("-------------------------------------------------------------");
+
+  console.log("----------------------------------");
 }
 
-// MuliplicationTable(2);
+// printMultiplicationTable(2);
 
-// Calculate and print sum of first 10 natural numbers
+/* ----------------------------------
+   6. Sum of first 10 natural numbers
+----------------------------------- */
 
-// let sum = 0;
-// let i=1;
+let sum = 0;
+let m = 1;
 
-// while(i<=10){
-//   sum+=i;
-//   i++;
-// }
-// console.log(sum);
+while (m <= 10) {
+  sum += m;
+  m++;
+}
 
-//  Calculate and print sum of all even numbers from 1 upto 100
+console.log("Sum of first 10 natural numbers:", sum);
 
-// let EvenSum =0;
-// let i=1;
+/* ----------------------------------
+   7. Sum of even numbers (1–100)
+----------------------------------- */
 
-// while(i<=100){
-//   if(i%2===0)
-//   {
-//     EvenSum+=i;
-//   }
-//   i++;
-// }
-// console.log(EvenSum);
+let evenSum = 0;
+let p = 1;
 
-// //  Calculate and print sum of all odd numbers from 1 upto 100
+while (p <= 100) {
+  if (p % 2 === 0) {
+    evenSum += p;
+  }
+  p++;
+}
 
-// let OddSum =0;
-// let i=1;
+console.log("Sum of even numbers:", evenSum);
 
-// while(i<=100){
-//   if(i%2===0)
-//   {
-//     OddSum+=i;
-//   }
-//   i++;
-// }
-// console.log(OddSum);
+/* ----------------------------------
+   8. Sum of odd numbers (1–100)
+----------------------------------- */
 
-// Calculate and print the factorial of given number
+let oddSum = 0;
+let q = 1;
 
-// let n =12 ;
-// let fact = 1;
+while (q <= 100) {
+  if (q % 2 !== 0) {
+    oddSum += q;
+  }
+  q++;
+}
 
-// while(n>=1){
-//   fact*=n;
-//   n--;
-// }
-// console.log(fact);
+console.log("Sum of odd numbers:", oddSum);
 
-// Find and print the product of all digit of a given number
+/* ----------------------------------
+   9. Factorial of a number
+----------------------------------- */
 
-// let number = "2034";
-// let product = 1;
+let num = 12;
+let factorial = 1;
 
-// for (let i = 0; i < number.length; i++) {
-//   if (Number(number[i]) === 0) {
-//     continue;
-//   }
-//   product *= Number(number[i]);
-// }
-// console.log(product);
+while (num >= 1) {
+  factorial *= num;
+  num--;
+}
+
+console.log("Factorial:", factorial);
+
+/* ----------------------------------
+   10. Product of digits of a number
+----------------------------------- */
 
 let number = 12345;
-let arr = number.toString().split(''); // here converting number to array of digits
+let digits = number.toString().split("");
 let product = 1;
 
-// By using for loop
-for (let i = 0; i < arr.length; i++) {
-  product*=arr[i];
-  console.log(arr[i]);
+/* Using for loop */
+for (let i = 0; i < digits.length; i++) {
+  product *= Number(digits[i]);
 }
-console.log(product);
 
-// By using reduce
-let mult = arr.reduce((acc,curr)=>{
- return acc*=curr;
-},1)
-console.log(mult);
+console.log("Product using loop:", product);
 
-// let arr = [1,2,3,4];
-// let mult = 1;
-// for(let i=0;i<arr.length;i++){
-//   mult*=arr[i];
-// }
-// console.log(mult);
+/* Using reduce */
+let reducedProduct = digits.reduce((acc, curr) => acc * Number(curr), 1);
+console.log("Product using reduce:", reducedProduct);
